@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<section class="report">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Product</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].prod_name%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Retail Price</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].sale_price%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Cost</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].cost%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-10">
+                <p>
+                    <%=rs[0].description%>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-default"><a href="/report/products">Back to Products</a></button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<% include ../partials/footer %>

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<section class="data">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Add New Product Form</h2>
+        </div>
+        <div class="panel-body">
+            <form method="post" action="/dataEntry/add_product" class="form-inline">
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="prodName">Product Name: </label>
+                    <input type="text" class="form-control" id="prodName" name="prodName" placeholder="My Product">
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="description">Description: </label>
+                    <textarea rows="3" class="form-control" id="description" name="description" placeholder="Description of my product."></textarea>
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="salePrice">Sale Price: </label>
+                    <input type="number" class="form-control" id="salePrice" name="salePrice" placeholder="0.00">
+                    <label for="cost">Cost: </label>
+                    <input type="number" class="form-control" id="cost" name="cost" placeholder="0.00">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-default">Add New Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<% include ../partials/footer %>

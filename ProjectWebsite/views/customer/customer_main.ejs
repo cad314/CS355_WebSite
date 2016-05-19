@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<section class="customer">
+
+    <table class="main_options">
+        <tr>
+            <td class="jumbotron">
+                <h3>Add New Customer</h3>
+                <p>This form is for adding a new customer to the database.<br />
+                    Only the first and last name of the customer is required.<br />
+                    <a class="btn btn-primary btn-sm" href="/customer/new" role="button">New Customer</a>
+                </p>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td class="jumbotron">
+                <h3>Edit Customer</h3>
+                <p>This report lets you view current products being offered.<br />
+                    <a class="btn btn-primary btn-sm" href="/report/products" role="button">All Products</a>
+                </p>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td class="jumbotron">
+                <h3>Delete Customer</h3>
+                <p>This report allow you to view all transaction history.<br />
+                    <a class="btn btn-primary btn-sm" href="/report/transactions" role="button">All Customers</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+
+<% include ../partials/footer %>

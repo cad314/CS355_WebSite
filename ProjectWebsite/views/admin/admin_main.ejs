@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<section class="admin">
+    <h2 id="message"></h2>
+    <table class="main_options">
+        <tr>
+            <td class="jumbotron">
+                <h3>View Users</h3>
+                <p>Click to view current non-admin users and delete or modify them.<br />
+                    <a class="btn btn-primary btn-sm" href="/admin/all" role="button">View All User</a>
+                </p>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td class="jumbotron">
+                <h3>Delete Your Admin Account</h3>
+                <p class="bg-danger">Warning! This action cannot be undone! Clicking button below will delete this administrator account.<br />
+                    <a class="btn btn-danger btn-sm" href="/admin/delete" role="button"><span class="glyphicon glyphicon-alert"></span> Delete Account</a>
+                </p>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td class="jumbotron">
+                <h3>Delete User</h3>
+                <p>This report allow you to view all transaction history.<br />
+                    <a class="btn btn-primary btn-sm" href="/report/transactions" role="button">All Customers</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+
+<% include ../partials/footer %>

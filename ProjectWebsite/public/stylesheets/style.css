@@ -1,0 +1,93 @@
+.container-fluid {
+    width: 1024px;
+    margin: 10px auto;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    border: solid 2px #ddffcc;
+    padding: 0;
+}
+
+.main_options
+{
+    width: 100%;
+    border-spacing: 5px;
+    border-collapse: separate;
+}
+
+.main_options .jumbotron {
+    padding: .2em;
+    background-color: #c3f0b4;
+}
+
+.main_options .jumbotron h3 {
+    margin: 0;
+    font-size: 14pt;
+    color: #076582;
+}
+
+.main_options .jumbotron p {
+    margin: 3px;
+    color: white;
+    font-size: 12pt;
+}
+
+a {
+    color: #00B7FF;
+}
+
+header {
+    background-color: #d1f4ff;
+    font-size: 40px;
+    color: #076582;
+    text-align: center;
+    padding: 15px;
+    height: 80px;
+}
+
+nav {
+    background-color: #fafafa;
+    line-height: 30px;
+    min-height: 500px;
+    width: 250px;
+    float: left;
+    padding: 10px 10px 0 10px;
+}
+
+section {
+    padding: 30px 30px 0 30px;
+    float: left;
+    width: 770px;
+    min-height: 500px;
+}
+
+footer {
+    background-color: #d1f4ff;
+    color: #076582;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+#welcome {
+    font-size: 1em;
+    padding: 3px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.display_table td {
+    font-size: 1.2em;
+}
+
+.display_table table{
+    table-layout: fixed;
+    width: 95%;
+}
+
+.display_table {
+    height: 400px;
+    width: 700px;
+    overflow: auto;
+}

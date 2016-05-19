@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<section class="report">
+    <div class="display_table">
+        <table>
+            <thead>
+            <th width="20%">Product</th><th width="15%">Retail Price</th><th width="15%">Cost</th><th width="50%">Description</th>
+            </thead>
+        </table>
+        <table class="table table-striped table-hover table-bordered">
+            <tbody>
+            <%for(var i = 0; i < rs.length; i++){%>
+            <tr>
+                <td width="20%"><a href="/report/products/one/?product_id=<%=rs[i].product_id%>"><%=rs[i].prod_name%></a></td>
+                <td width="15%" style="text-align: right"><a href="/report/products/one/?product_id=<%=rs[i].product_id%>"><%=rs[i].sale_price%></a></td>
+                <td width="15%" style="text-align: right"><a href="/report/products/one/?product_id=<%=rs[i].product_id%>"><%=rs[i].cost%></a></td>
+                <td width="50%"><a href="/report/products/one/?product_id=<%=rs[i].product_id%>"><%=rs[i].description%></a></td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<% include ../partials/footer %>

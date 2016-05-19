@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<section class="report">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Source</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].source_name%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Value</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].trans_value%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-10">
+                <h4><%=rs[0].trans_date%></h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="source" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-10">
+                <p>
+                    <%=rs[0].description%>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-default"><a href="/report/transactions">Back to Transactions</a></button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<% include ../partials/footer %>

@@ -1,0 +1,51 @@
+<% var js_includes = ['/javascripts/login_ajax.js']%>
+
+<% include ../partials/header %>
+
+<section class="home">
+    <form id="signin-form">
+        <h3 class="form-signin-heading" id="message">Please sign in</h3>
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus><br />
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-med btn-primary" id="signin">Sign In</button>
+            <button class="btn btn-med btn-secondary" id="signup">New User Sign Up</button>
+        </div>
+    </form>
+    <div class="panel panel-primary hidden" id="signup-form">
+        <div class="panel-heading">
+            <h2 id="message2">New User Sign Up</h2>
+        </div>
+        <div class="panel-body">
+            <form class="form-inline" method="POST">
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="firstName">User Name: </label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe">
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="emailAddress">Email Address: </label>
+                    <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="john.doe@example.com">
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="password1">Password: </label>
+                    <input type="password" maxlength="50" class="form-control" id="password1" name="password1">
+                    <label for="password2">Confirm Password: </label>
+                    <input type="password" maxlength="50" class="form-control" id="password2" name="password2">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-med btn-primary" id="create">Create User Account</button>
+                </div>
+            </form>
+        </form>
+    </div>
+</section>
+
+<% include ../partials/footer %>

@@ -1,0 +1,42 @@
+<% var js_includes = ['/javascripts/admin_ajax.js']%>
+
+<% include ../partials/header %>
+
+<section class="admin">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Web User Information:</h2>
+        </div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="prodName">First Name: </label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" value="<%=rs[0].first_name%>">
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="description">Last Name: </label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" value="<%=rs[0].last_name%>">
+                </div>
+                <div class="form-group"  style="margin-bottom: 10px;">
+                    <label for="email">Email: </label>
+                    <input type="text" class="form-control" id="email" name="email" value="<%=rs[0].email%>">
+                    <label for="access">Access Level: </label>
+                    <select class="form-control"  style="margin-bottom: 10px;" id="access" name="access">
+                        <option <%if(rs[0].access_lvl == 0){%><%='selected=true'%><%}%> value=0>Level 0</option>
+                        <option <%if(rs[0].access_lvl == 1){%><%='selected=true'%><%}%> value=1>Level 1</option>
+                        <option <%if(rs[0].access_lvl == 2){%><%='selected=true'%><%}%> value=2>Level 2</option>
+                        <option <%if(rs[0].access_lvl == 3){%><%='selected=true'%><%}%> value=3>Level 3</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <input class="hidden" id="account" value=<%=rs[0].account_id%>>
+                    <button id="update" class="btn btn-default">Update User</button>
+                    <button class="btn btn-danger">Delete User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<% include ../partials/footer %>

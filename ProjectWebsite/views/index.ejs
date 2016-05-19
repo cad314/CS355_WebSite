@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<section class="home">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Welcome<%if(data.access >= 2){%><%=' Administrator!'%><%}else{%><%='!'%><%}%></h3>
+        </div>
+        <div class="panel-body">
+
+            <%if(data.access == 0){%>
+            <p>You have successfully created a new user account.
+                Unfortunately you do not have access to the features of this web application until you are granted access by an administrator.
+                Ask your administrator to set your access level so that you may use the main features of this site.</p>
+            <%} else {%>
+            <h3>You have successfully logged in! Your user access level is: <%=data.access%></h3>
+            <ul>
+                <h4>Your user has can do the following:</h4>
+                <%if(data.access >= 1){%>
+                <li>User can view reports.</li>
+                <%}
+                    if(data.access >= 2){
+                %>
+                <li>User can fill out forms and enter data.</li>
+                <%}
+                if(data.access >= 3){
+                %>
+                <li>User has admin access and can view, delete and modify access level of other users.</li>
+                <%}%>
+            </ul>
+            <%}%>
+        </div>
+    </div>
+</section>
+
+<% include partials/footer %>
